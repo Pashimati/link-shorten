@@ -1,0 +1,18 @@
+@import "src/styles/variables";
+
+.login-wrap {
+  background-color: $white;
+  padding: 30px;
+  width: 500px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  margin: -125px 0 0 -125px;
+}
+
+.login__title {
+  font-size: 20px;
+  color: $black;
+  padding-bottom: 20px;
+}
