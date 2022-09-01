@@ -1,0 +1,35 @@
+@import "../../styles/variables";
+
+.my-form {
+  display: flex;
+  flex-direction: column;
+
+  &__btn {
+    max-width: 150px;
+    background-color: $base-yellow-color;
+    color: $black;
+
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  label {
+    color: $paragraph-font;
+    padding-bottom: 7px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 123.6%;
+  }
+
+  input {
+    background-color: #F0F0F6;
+    border: #F0F0F6;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__error {
+    margin-top: -13px;
+    color: rgb(255, 99, 71);
+  }
+}
