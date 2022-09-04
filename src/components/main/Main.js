@@ -1,10 +1,10 @@
 import Animation from "../animation/Animation";
 import './Main.scss'
+import AddShortLink from "../add-short-link/Add-short-link";
 
-const Main = () => {
+const Main = ({loggedIn}) => {
 
-    const flag = false;
-    const content = flag ? <h1>Hello</h1> : <Animation/>;
+    const content = loggedIn ? <AddShortLink/> : <Animation/>;
 
     return (
         <div className="container">
