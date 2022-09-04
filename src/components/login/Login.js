@@ -1,10 +1,10 @@
 import MyForm from "../my-form/My-form";
 
-const Login = () => {
+const Login = ({setLoggedIn}) => {
     return (
         <div className="login-wrap">
             <h2 className="login__title">Войдите пожалуйста</h2>
-            <MyForm/>
+            <MyForm setLoggedIn={setLoggedIn}/>
         </div>
     );
 };
