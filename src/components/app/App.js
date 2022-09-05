@@ -3,7 +3,7 @@ import {
     Routes,
     Route,
 } from "react-router-dom";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {CookiesProvider} from "react-cookie";
 
 import Main from "../main/Main";
@@ -11,7 +11,6 @@ import Header from "../header/Header";
 import Login from "../login/Login";
 import Register from "../register/Register";
 import Table from "../table/Table";
-
 import './App.scss';
 
 function App() {
