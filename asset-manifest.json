@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Pashimati/link-shorten/static/css/main.3720125a.css",
+    "main.js": "/Pashimati/link-shorten/static/js/main.c13a67e1.js",
+    "index.html": "/Pashimati/link-shorten/index.html",
+    "main.3720125a.css.map": "/Pashimati/link-shorten/static/css/main.3720125a.css.map",
+    "main.c13a67e1.js.map": "/Pashimati/link-shorten/static/js/main.c13a67e1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3720125a.css",
+    "static/js/main.c13a67e1.js"
+  ]
+}
