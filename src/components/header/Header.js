@@ -23,7 +23,7 @@ const Header = ({setLoggedIn, loggedIn}) => {
                             <Link className="menu-list__link" to="/">Главная</Link>
                         </li>
                         <li className="menu-list__item">
-                            <Link className="menu-list__link" to="statistic-links">Статистика</Link>
+                            {loggedIn? <Link className="menu-list__link" to="statistic-links">Статистика</Link> : null}
                         </li>
                         <li className="menu-list__item">
                             <Link className="menu-list__link" to="registration">Регистрация</Link>
