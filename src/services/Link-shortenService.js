@@ -14,9 +14,13 @@ const useLinkShortenService = () => {
         })
     }
 
-    const getStatistics = () => {
-       return  axios.get(`${_apiBase}/squeeze`, {
+    const getStatistics = (offset = 0) => {
+       return  axios.get(`${_apiBase}/statistics`, {
            headers: _headers(cookies.token),
+           params: {
+               limit: 10,
+               offset: offset,
+           }
         })
     }
 
