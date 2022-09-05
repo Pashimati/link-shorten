@@ -7,7 +7,6 @@ import useLoginService from "../../services/LoginService";
 import './My-form.scss'
 
 const MyForm = ({setLoggedIn}) => {
-    console.log(setLoggedIn)
     const [cookies, setCookie] = useCookies(['token']);
     const {register, login} = useLoginService();
     const location = useLocation();
@@ -46,17 +45,17 @@ const MyForm = ({setLoggedIn}) => {
     return (
             <Formik
                 initialValues={{ username: '', password: '' }}
-                // validate={values => {
-                //     const errors = {};
-                //     if (!values.username) {
-                //         errors.username = 'Обязательное поле!';
-                //     } else if (
-                //         !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.username)
-                //     ) {
-                //         errors.username = 'Невалидный email адрес';
-                //     }
-                //     return errors;
-                // }}
+                validate={values => {
+                    const errors = {};
+                    if (!values.username) {
+                        errors.username = 'Обязательное поле!';
+                    } else if (
+                        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.username)
+                    ) {
+                        errors.username = 'Невалидный email адрес';
+                    }
+                    return errors;
+                }}
                 onSubmit={(values, { setSubmitting }) => {
                     {flag ? handleLogin(values) : handleRegister(values)}
                 }}
