@@ -32,9 +32,11 @@ const Header = ({setLoggedIn, loggedIn}) => {
                                 : null
                         }
 
-                        <li className="menu-list__item">
-                            <Link className="menu-list__link" to="registration">Регистрация</Link>
-                        </li>
+                        {!loggedIn ?
+                            <li className="menu-list__item">
+                                <Link className="menu-list__link" to="registration">Регистрация</Link>
+                        </li> : null
+                        }
                         <li className="menu-list__item">
                             {loggedIn? <Link className="menu-list__link" to="/" onClick={(e) => logout(e)}>Выход</Link> :
                                 <Link className="menu-list__link" to="login">Вход</Link>
