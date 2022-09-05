@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Pashimati/link-shorten/static/css/main.3720125a.css",
-    "main.js": "/Pashimati/link-shorten/static/js/main.e469dcf6.js",
-    "index.html": "/Pashimati/link-shorten/index.html",
-    "main.3720125a.css.map": "/Pashimati/link-shorten/static/css/main.3720125a.css.map",
-    "main.e469dcf6.js.map": "/Pashimati/link-shorten/static/js/main.e469dcf6.js.map"
+    "main.css": "/static/css/main.3720125a.css",
+    "main.js": "/static/js/main.e469dcf6.js",
+    "index.html": "/index.html",
+    "main.3720125a.css.map": "/static/css/main.3720125a.css.map",
+    "main.e469dcf6.js.map": "/static/js/main.e469dcf6.js.map"
   },
   "entrypoints": [
     "static/css/main.3720125a.css",
