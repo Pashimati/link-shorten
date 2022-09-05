@@ -1,16 +1,18 @@
 import { Link } from "react-router-dom";
 import './Header.scss'
-import {useEffect, useState} from "react";
 import {useCookies} from "react-cookie";
+import {useNavigate} from "react-router";
 
 const Header = ({setLoggedIn, loggedIn}) => {
     const [cookies, setCookie, removeCookie] = useCookies(['token']);
+    const navigate = useNavigate();
 
     const logout = (e) => {
         e.preventDefault()
         removeCookie('token')
         localStorage.removeItem('loggedIn')
         setLoggedIn(false)
+        navigate('/')
     }
 
     return (
@@ -22,9 +24,14 @@ const Header = ({setLoggedIn, loggedIn}) => {
                         <li className="menu-list__item">
                             <Link className="menu-list__link" to="/">Главная</Link>
                         </li>
-                        <li className="menu-list__item">
-                            {loggedIn? <Link className="menu-list__link" to="statistic-links">Статистика</Link> : null}
-                        </li>
+                        {
+                            loggedIn
+                                ? <li className="menu-list__item">
+                                    <Link className="menu-list__link" to="statistic-links">Статистика</Link>
+                                  </li>
+                                : null
+                        }
+
                         <li className="menu-list__item">
                             <Link className="menu-list__link" to="registration">Регистрация</Link>
                         </li>
