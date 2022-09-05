@@ -12,6 +12,16 @@
   table-layout: fixed;
   width: 100%;
   margin-bottom: 20px;
+
+  &__button {
+    position: relative;
+    left: 46%;
+    margin: 20px 0 50px 0;
+    background-color: $base-yellow-color;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+  }
 }
 .table th {
   font-weight: bold;
