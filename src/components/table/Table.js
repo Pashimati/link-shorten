@@ -1,24 +1,25 @@
 import {useEffect, useState} from "react";
 import './Table.scss'
 import useLinkShortenService from "../../services/Link-shortenService";
-import MySelect from "../my-select/My-select";
+import MySelect from "../select/My-select";
 
 
 const Table = () => {
     const [links, setLinks] = useState();
     const [selectedSort, setSelectedSort] = useState('');
+    const [totalCount, setTotalCount] = useState(0);
+
     const { getStatistics } = useLinkShortenService();
+
 
     useEffect(() => {
         getStatistics()
             .then(res => {
+                console.log(res)
                 setLinks(res.data)
             })
     }, [])
 
-    function compareNumbers(a, b) {
-        return a - b;
-    }
 
     const sortLinks = (sort) => {
         setSelectedSort(sort)
@@ -32,6 +33,7 @@ const Table = () => {
     return (
         <div className="table-container">
             <h1 className="table-title">Список ссылок</h1>
+
             <MySelect
                 value={selectedSort}
                 onChange={sortLinks}
