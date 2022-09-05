@@ -1,4 +1,4 @@
-import MyForm from "../my-form/My-form";
+import MyForm from "../form/My-form";
 
 const Login = ({setLoggedIn}) => {
     return (
